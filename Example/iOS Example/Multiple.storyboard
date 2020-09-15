@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Kd6-pZ-9H2">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Autolayout-->
+        <scene sceneID="lcr-ag-frF">
+            <objects>
+                <viewController title="Autolayout" id="Kd6-pZ-9H2" customClass="MultipleViewController" customModule="iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g3c-AA-D9P"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y6a-GD-4nY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KQq-cH-Xgb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jPg-BZ-j87">
+                                <rect key="frame" x="130" y="245" width="91.5" height="34"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Describe your last 'Happy' memory in detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiJ-Jx-ExE">
+                                <rect key="frame" x="22" y="159" width="331" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Response" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="44r-xz-Pgf">
+                                <rect key="frame" x="99" y="316" width="141" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1764705882" green="0.72941176470000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Kd6-pZ-9H2" id="kyt-WB-1as"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="avR-wY-UyM">
+                                <rect key="frame" x="46" y="235" width="259" height="44"/>
+                                <color key="backgroundColor" red="0.60392156860000001" green="0.61568627450000002" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="avR-wY-UyM" firstAttribute="width" secondItem="jPg-BZ-j87" secondAttribute="width" constant="10" id="1bq-Pe-5HM"/>
+                            <constraint firstItem="jPg-BZ-j87" firstAttribute="centerY" secondItem="KQq-cH-Xgb" secondAttribute="centerY" id="1dE-Va-8ng"/>
+                            <constraint firstItem="avR-wY-UyM" firstAttribute="centerX" secondItem="jPg-BZ-j87" secondAttribute="centerX" id="3zY-fK-lb9"/>
+                            <constraint firstItem="jPg-BZ-j87" firstAttribute="centerX" secondItem="KQq-cH-Xgb" secondAttribute="centerX" id="ZZh-pp-BA2"/>
+                            <constraint firstItem="avR-wY-UyM" firstAttribute="centerY" secondItem="jPg-BZ-j87" secondAttribute="centerY" id="kRQ-EH-nU0"/>
+                            <constraint firstItem="avR-wY-UyM" firstAttribute="height" secondItem="jPg-BZ-j87" secondAttribute="height" constant="10" id="pI1-8Y-qc7"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="EMo-uu-H53" appends="YES" id="oO9-Ca-xGc"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Multiple" id="S5T-5z-kt8"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="firstTextField" destination="44r-xz-Pgf" id="3kg-Sr-CKh"/>
+                        <outletCollection property="keyboardConstraints" destination="1dE-Va-8ng" collectionClass="NSMutableArray" id="2qt-Eg-FfN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xhG-kN-51B" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="EMo-uu-H53">
+                    <connections>
+                        <action selector="dismissTapped:" destination="Kd6-pZ-9H2" id="xhQ-W5-AN8"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-884" y="808.24587706146929"/>
+        </scene>
+    </scenes>
+</document>
